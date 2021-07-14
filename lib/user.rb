@@ -1,6 +1,5 @@
 class User
-  attr_reader :name,
-              :jokes
+  attr_reader :name, :jokes
 
   def initialize(name)
     @name = name
@@ -16,8 +15,10 @@ class User
   end
 
   def joke_by_id(id)
-    @jokes.find do |joke|
+    @jokes.find_all do |joke|
       joke.id == id
     end
   end
+
+
 end
